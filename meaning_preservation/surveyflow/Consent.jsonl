@@ -1,0 +1,4 @@
+{"id":"1","text":"Ik bevestig dat ik ervaring heb met communicatie richting patiënten en hun familieleden rondom genetische counseling.","schema": "radio", "choices": ["Ja", "Nee"], "label_requirement": {"right_label":["Ja"]}}
+{"id":"2","text":"Ik bevestig dat ik de Nederlandse taal beheers.","schema": "radio", "choices": ["Ja", "Nee"], "label_requirement": {"right_label":["Ja"]}}
+{"id":"3","text":"Ik geef vrijwillig toestemming voor het gebruik van mijn anonieme antwoorden voor een masterthesis.","schema": "radio", "choices": ["Ja", "Nee"], "label_requirement": {"right_label":["Ja"]}}
+{"id":"4","text":"Ik geef vrijwillig toestemming deel te nemen aan deze survey en begrijp dat ik op ieder moment mijn deelname stop kan zetten zonder een reden te hoeven geven.","schema": "radio", "choices": ["Ja", "Nee"], "label_requirement": {"right_label":["Ja"]}}

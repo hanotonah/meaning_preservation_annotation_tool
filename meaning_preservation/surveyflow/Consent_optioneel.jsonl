@@ -1,0 +1,3 @@
+{"id":"1","text":" ","schema": "pure_display", "choices": ["De volgende vragen zijn niet noodzakelijk voor deelname aan het onderzoek. U kunt 'nee' invullen als u dat wilt.<br>" ]}
+{"id":"2","text":"Ik geef toestemming voor het gebruik van mijn anonieme antwoorden in vervolgonderzoek binnen dezelfde masterthesis.","schema": "radio", "choices": ["Ja", "Nee"]}
+{"id":"3","text":"Ik geef toestemming dat mijn geanonimiseerde antwoorden lokaal worden gearchiveerd door de onderzoeker voor mogelijk toekomstig onderzoek en onderwijs buiten de masterthesis.","schema": "radio", "choices": ["Ja", "Nee"]}

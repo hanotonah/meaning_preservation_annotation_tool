@@ -1,0 +1,135 @@
+{
+    "port": 9001,
+
+    "server_name": "potato annotator",
+
+    "annotation_task_name": "Betekenisbehoud na simplificatie met AI",
+
+    "output_annotation_dir": "annotation_output/",
+
+    "output_annotation_format": "csv",
+
+    "data_files": [
+       "data_files/text_data.csv"
+    ],
+
+    "item_properties": {
+        "id_key": "id",
+        "text_key": "text"
+    },
+
+
+    "user_config": {
+      "allow_all_users": True,
+      "users": [  ],
+    },
+
+    "login": {
+      "type": 'password',
+      "url_argument": 'ID' 
+      },
+
+    "list_as_text": {
+      "text_list_prefix_type": 'none',
+      "horizontal": True,
+    },
+
+    "jumping_to_id_disabled": True,
+    "hide_navbar": True,
+
+    "alert_time_each_instance": 10000000,
+
+    "surveyflow": {
+        "on": true,
+        "order": [
+            "pre_annotation",
+            "post_annotation"
+        ],
+        "pre_annotation": [
+            "surveyflow/Briefing.jsonl",
+            "surveyflow/Uitleg.jsonl",
+            "surveyflow/Uitleg_samenvatting.jsonl",
+            "surveyflow/Consent.jsonl",
+            "surveyflow/Consent_optioneel.jsonl"
+        ],
+        "post_annotation": [
+            "surveyflow/Debriefing_1.jsonl",
+            "surveyflow/Debriefing_2.jsonl",
+        ],
+    },
+
+     "automatic_assignment": {
+        "on": true,
+        "output_filename": "task_assignment.json",
+        "sampling_strategy": "random",
+        "labels_per_instance": 3,
+        "instance_per_annotator": 4,
+        "test_question_per_annotator": 0,
+        "users": []
+    },
+
+    "annotation_schemes": [
+        {
+          "annotation_type": "highlight",
+          "name": "Betekenisbehoud_orig",
+          "description": "Betekenisbehoud annotatie - Originele tekst",
+          "labels": [
+            { "name": "Verwijdering_1",
+              "tooltip_file": "tooltips/verwijdering_1.html"
+            },
+            { "name": "Verwijdering_2",
+              "tooltip_file": "tooltips/verwijdering_2.html"
+            }
+            ],
+          "sequential_key_binding": True,
+        },
+        {
+          "annotation_type": "highlight",
+          "name": "Betekenisbehoud_simp",
+          "description": "Betekenisbehoud annotatie - Versimpelde tekst",
+          "labels": [
+            { "name": "Toevoeging_1",
+              "tooltip_file": "tooltips/toevoeging_1.html"
+            },
+            { "name": "Toevoeging_2",
+              "tooltip_file": "tooltips/toevoeging_2.html"
+            },
+            { "name": "Vervanging_1",
+              "tooltip_file": "tooltips/vervanging_1.html"
+            },
+            { "name": "Vervanging_2",
+              "tooltip_file": "tooltips/vervanging_2.html"
+            },
+            { "name": "Misvormd",
+              "tooltip_file": "tooltips/misvormd.html"
+            }],
+          "sequential_key_binding": True,
+        },
+        {
+            "annotation_type": "likert",
+            "name": "Algemene scores",
+            "description": "Hoe zou je betekenisbehoud binnen deze tekstset over het algemeen beoordelen?",
+            "display_config": {
+              "num_columns":1
+            },
+
+            "arrangement":'vertical',
+
+            "options": ['Betekenisbehoud'],
+            "labels": ['Erg slecht', 'Slecht', 'Neutraal', 'Goed' , 'Zeer goed'],
+
+            "label_requirement": { "required": True },
+            "sequential_key_binding": False,
+            "option_randomization": False,
+            "has_free_response": {
+                "instruction": "<br>Hier kunt u eventueel (algemene) opmerkingen achterlaten:"
+            },            
+        },
+    ],
+
+    "html_layout": "templates/layout.html",
+    "base_html_template": "default",
+    "header_file": "default",
+    "site_dir": "default",
+
+}

@@ -1,0 +1,2 @@
+{"id":"1","text":"","schema": "pure_display", "choices": ["Dit is het einde van de survey. Als u wit, kunt u nu nog aanpassingen maken aan uw antwoorden door op 'move backward' te klikken.<br>"]}
+{"id":"2","text":"Ik bevestig dat ik de survey heb ingevuld en geen antwoorden meer wil aanpassen","schema": "radio", "choices": ["Ja", "Nee"], "label_requirement": {"right_label":["Ja"]}}
