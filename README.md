@@ -1,4 +1,4 @@
-# potato_meaning_preservation
+# Meaning preservation annotation tool
 Annotation tool created for a meaning preservation task for the Master thesis of Hannah Ottenschot (2024-2025) for the University of Twente. The tool is based on Potato: The Portable Annotation Tool (https://github.com/davidjurgens/potato). 
 
 # Installation steps:
